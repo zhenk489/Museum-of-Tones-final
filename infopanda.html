@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Climate Crisis|Unbounded">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<style>
+      #monsterPower {
+        margin-top: 6em;
+        margin-bottom: 14em; /* 可根据需要调整数值，比如 24px、32px 等 */
+        width: 59vw;
+    }
+</style>
+
+<body>
+    <header>
+        <h1 class="title2">Kungfu Panda</h1>
+        <a href="index.html">Home</a>
+    </header>
+    <main>
+        <div class="main-left">
+            <audio src="audio/功夫熊猫.mov" preload="auto" id="sound"></audio>
+            <img src="images/功夫熊猫.png" alt="Monster Power" id="monsterPower">
+            <h3>Fun Facts About Movie</h3>
+            <p>
+                Animators collaborated with martial arts experts and studied real fight footage to ensure Po’s movements were true to Kung Fu. The film also pays tribute to Chinese culture through traditional painting styles, 
+                architecture, and the theme of inner peace and spiritual balance.
+            </p>
+            <p>Animating Po was a challenge—his clumsy, fluffy form had to move with convincing Kung Fu agility. 
+                Animators spent months balancing humor with fluid action. Meanwhile, Jack Black took Kung Fu lessons to better channel 
+                Po’s spirit and bring energy to his voice performance.
+            </p>
+            <h3>From Sketch to Screen</h3>
+            <iframe class="mt-4" height="515" src="https://www.youtube.com/embed/s0fShnyOC6Y?si=rO5q-vD_3NhYo7eM" title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+            <p>In this interview, Jack Black discusses his role as Po in Kung Fu Panda, 
+                sharing insights into his approach to voice acting and the character's development. 
+                He reflects on the challenges of bringing an animated character to 
+                life and the joy of working on a film that blends humor with heartfelt storytelling.</p>
+        </div>
+        <div class="main-right">
+            <p>Welcome to<br>Monstropoks</p>
+            <div class="item">
+                <span>Released</span>
+                <span>2008</span>
+            </div>
+            <div class="item">
+                <span>Studio</span>
+                <span>DreamWorks<br> Animation</span>
+            </div>
+            <div class="item">
+                <span>Directed by</span>
+                <span>Mark Osborne <br>& John Stevenson</span>
+            </div>
+            <div class="item item-col">
+                <span>Main Characters</span>
+                <span>Starring Po, Master Shifu,<br>Tigress, Tai Lung, and Oogway</span>
+            </div>
+            <div class="item item-col">
+                <span>One-liner</span>
+                <span>A clumsy panda becomes an unlikely kung fu hero.                </span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const hoverElement = document.getElementById('monsterPower');
+        const audio = document.getElementById('sound');
+
+        hoverElement.addEventListener('mouseenter', () => {
+            audio.play();
+        });
+
+        hoverElement.addEventListener('mouseleave', () => {
+            audio.pause();
+            audio.currentTime = 0; // 将音频回到开始位置
+        });
+    </script>
+</body>
+
+</html>

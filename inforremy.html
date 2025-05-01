@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Climate Crisis|Unbounded">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<style>
+    #monsterPower {
+        margin-top: 4em;
+        margin-bottom: 11em; /* 可根据需要调整数值，比如 24px、32px 等 */
+    }
+
+</style>
+
+<body>
+    <header>
+        <h1 class="title2">Ratatouille</h1>
+        <a href="index.html">Home</a>
+    </header>
+    <main>
+        <div class="main-left">
+            <audio src="audio/美食总动员.mp4" preload="auto" id="sound"></audio>
+            <img src="images/料理鼠王内页.png" alt="Monster Power" id="monsterPower">
+            <h3>Fun Facts About Movie</h3>
+            <p>
+                Pixar hired renowned chef Thomas Keller as a food consultant for Ratatouille, and he even created a real-life version of the beautifully layered dish Remy serves at the end of the film. 
+                To ensure authenticity in the kitchen scenes, the animators also took French cooking classes and spent hours observing professional chefs as they chopped, stirred, and plated.
+            </p>
+            <p>Pixar knew “Ratatouille” was difficult for English-speaking audiences to pronounce and spell, but they kept it to reflect the film’s themes of uniqueness and bold ambition.</p>
+            <h3>From Sketch to Screen</h3>
+            <iframe class="mt-4" height="515" src="https://www.youtube.com/embed/cmT0J7q8olk?si=bb3fwYsEaYD3thbp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>In this interview, director Pete Docter shares the inspiration behind Monsters, Inc., the character
+                design
+                process, and how the ending of the film evolved. He explains in detail how the relationship between
+                Sulley
+                and Boo shaped the development of the story, and the creative choices he made to preserve the film’s
+                emotional ending.</p>
+        </div>
+        <div class="main-right">
+            <p>Welcome to<br>Remy’s Table</p>
+            <div class="item">
+                <span>Released</span>
+                <span>2007</span>
+            </div>
+            <div class="item">
+                <span>Studio</span>
+                <span>Pixar Animation<br>Studios</span>
+            </div>
+            <div class="item">
+                <span>Directed by</span>
+                <span>Brad Bird</span>
+            </div>
+            <div class="item item-col">
+                <span>Main Characters</span>
+                <span>Starring Remy, Linguini, <br>Colette, and Anton Ego</span>
+            </div>
+            <div class="item item-col">
+                <span>One-liner</span>
+                <span>A rat chases his culinary dream<br> in Paris.</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const hoverElement = document.getElementById('monsterPower');
+        const audio = document.getElementById('sound');
+
+        hoverElement.addEventListener('mouseenter', () => {
+            audio.play();
+        });
+
+        hoverElement.addEventListener('mouseleave', () => {
+            audio.pause();
+            audio.currentTime = 0; // 将音频回到开始位置
+        });
+    </script>
+</body>
+
+</html>

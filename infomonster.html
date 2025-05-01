@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Climate Crisis|Unbounded">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<style>
+      #monsterPower {
+        margin-top: 4em;
+        margin-bottom: 14em; /* 可根据需要调整数值，比如 24px、32px 等 */
+        width: 50vw;
+    }
+</style>
+
+<body>
+    <header>
+        <h1 class="title2">Monsters, Inc</h1>
+        <a href="index.html">Home</a>
+    </header>
+    <main>
+        <div class="main-left">
+            <audio src="audio/sound.mp4" preload="auto" id="sound"></audio>
+            <img src="images/monsterPower.png" alt="Monster Power" id="monsterPower">
+            <h3>Fun Facts About Movie</h3>
+            <p>
+                Sulley’s fur was made up of over 2.3 million individually animated hairs, and Pixar had to create a
+                whole new software called Fizt just to simulate it realistically. One frame of Sulley could take 11–12
+                hours to render! Mike Was Almost “One-Eyed” in the Idea Stage — Literally!
+            </p>
+            <p>Sulley’s fur was made up of over 2.3 million individually animated hairs, and Pixar had to create a whole
+                new software called Fizt just to simulate it realistically. One frame of Sulley could take 11–12 hours
+                to render! Mike Was Almost “One-Eyed” in the Idea Stage — Literally! Early concept art had Mike Wazowski
+                with arms and legs sticking out of his eyeball. It took many iterations before he got his signature
+                round green body.</p>
+            <h3>From Sketch to Screen</h3>
+            <iframe class="mt-4" height="515" src="https://www.youtube.com/embed/8xQwy4TdDaM?si=ALv22cB7IIYYSZ_M"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>In this interview, director Pete Docter shares the inspiration behind Monsters, Inc., the character
+                design
+                process, and how the ending of the film evolved. He explains in detail how the relationship between
+                Sulley
+                and Boo shaped the development of the story, and the creative choices he made to preserve the film’s
+                emotional ending.</p>
+        </div>
+        <div class="main-right">
+            <p>Welcome to<br>Monstropoks</p>
+            <div class="item">
+                <span>Released</span>
+                <span>2001</span>
+            </div>
+            <div class="item">
+                <span>Studio</span>
+                <span>Pixar Animation<br>Studios</span>
+            </div>
+            <div class="item">
+                <span>Directed by</span>
+                <span>Pete Docter</span>
+            </div>
+            <div class="item item-col">
+                <span>Main Characters</span>
+                <span>Starring Sulley, Mike<br>Wazowski, and Boo</span>
+            </div>
+            <div class="item item-col">
+                <span>One-liner</span>
+                <span>A monster comedy where <br>screams power the city.</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const hoverElement = document.getElementById('monsterPower');
+        const audio = document.getElementById('sound');
+
+        hoverElement.addEventListener('mouseenter', () => {
+            audio.play();
+        });
+
+        hoverElement.addEventListener('mouseleave', () => {
+            audio.pause();
+            audio.currentTime = 0; // 将音频回到开始位置
+        });
+    </script>
+</body>
+
+</html>

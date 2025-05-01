@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Climate Crisis|Unbounded">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<style>
+    #monsterPower {
+        margin-top: 8em;
+        margin-bottom: 11em; /* 可根据需要调整数值，比如 24px、32px 等 */
+    }
+
+</style>
+
+<body>
+    <header>
+        <h1 class="title2">Ice Age</h1>
+        <a href="index.html">Home</a>
+    </header>
+    <main>
+        <div class="main-left">
+            <audio src="audio/冰河世纪.mov" preload="auto" id="sound"></audio>
+            <img src="images/冰河世纪.png" alt="Monster Power" id="monsterPower">
+            <h3>Fun Facts About Movie</h3>
+            <p>
+                Scrat wasn’t in the original script—he was created by one of the film’s artists as a last-minute addition, but quickly stole the show. His relentless acorn-chasing became one of <br>the most beloved running gags in the entire franchise.
+            </p>
+            <p>All the main characters were deliberately designed to contrast each other—a giant, <br>serious mammoth; a fast-talking, clumsy sloth; and a stealthy, serious predator—to create<br> a comedic “found family” dynamic.</p>
+            <h3>From Sketch to Screen</h3>
+            <iframe class="mt-4" height="515" src="https://www.youtube.com/embed/_gi4JgbvywQ?si=jorqjLSsa1KZILnZ" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+            web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>This video explores the surprising true story behind Scrat, the acorn-obsessed squirrel from Ice Age. 
+               It reveals how Scrat's creation involved unexpected inspiration, a legal dispute over character rights, and how the mischievous little creature became one of the most beloved icons of the franchise.
+
+            </p>
+        </div>
+        <div class="main-right">
+            <p>Welcome to<br>Remy’s Table</p>
+            <div class="item">
+                <span>Released</span>
+                <span>2002</span>
+            </div>
+            <div class="item">
+                <span>Studio</span>
+                <span>Blue Sky<br>Studios</span>
+            </div>
+            <div class="item">
+                <span>Directed by</span>
+                <span>Chris Wedge</span>
+            </div>
+            <div class="item item-col">
+                <span>Main Characters</span>
+                <span>Starring Manny, Sid, Diego <br>Colette, and Scrat</span>
+            </div>
+            <div class="item item-col">
+                <span>One-liner</span>
+                <span>A mammoth, sloth, and tiger <br>unite to return a lost baby.</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const hoverElement = document.getElementById('monsterPower');
+        const audio = document.getElementById('sound');
+
+        hoverElement.addEventListener('mouseenter', () => {
+            audio.play();
+        });
+
+        hoverElement.addEventListener('mouseleave', () => {
+            audio.pause();
+            audio.currentTime = 0; // 将音频回到开始位置
+        });
+    </script>
+</body>
+
+</html>

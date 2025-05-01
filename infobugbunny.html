@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Climate Crisis|Unbounded">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<style>
+      #monsterPower {
+        margin-top: 0em;
+        margin-bottom: 6em; /* 可根据需要调整数值，比如 24px、32px 等 */
+        width: 48vw;
+    }
+</style>
+
+<body>
+    <header>
+        <h1 class="title2">Looney Tunes</h1>
+        <a href="index.html">Home</a>
+    </header>
+    <main>
+        <div class="main-left">
+            <audio src="audio/兔八哥.mov" preload="auto" id="sound"></audio>
+            <img src="images/兔八哥.png" alt="Monster Power" id="monsterPower">
+            <h3>Fun Facts About Movie</h3>
+            <p>
+                Looney Tunes: Back in Action combines real actors with traditional 2D animation, 
+                carrying on the legacy of films like Who Framed Roger Rabbit and reintroducing 
+                classic characters in a modern cinematic setting.
+
+            </p>
+            <p>The film is packed with pop culture parodies—from James Bond and Psycho to Batman and Casablanca—adding layers of humor for all ages. 
+                Interestingly, it was originally planned as a sequel to Space Jam, but after Michael Jordan declined to return, the concept was reworked into a wild, 
+                standalone Looney Tunes road adventure.
+
+            </p>
+            <h3>From Sketch to Screen</h3>
+            <iframe class="mt-4" height="515" src="https://www.youtube.com/embed/AjtiFRSgSt4?si=o3Ml6fjMMS87mBWN" title="YouTube video player" frameborder="0" allow="accelerometer; 
+                    autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>In this interview, Brendan Fraser and Jenna Elfman talk about the fun and challenges of acting alongside 
+                animated characters in Looney Tunes: Back in Action. They reflect on mixing live-action with classic cartoon energy, 
+                paying tribute to the original Looney Tunes while reintroducing them to a new audience through humor and action.
+
+            </p>
+        </div>
+        <div class="main-right">
+            <p>Welcome to<br>LOONEY TUNES HQ</p>
+            <div class="item">
+                <span>Released</span>
+                <span>2003</span>
+            </div>
+            <div class="item">
+                <span>Studio</span>
+                <span>Warner Bros. Pictures</span>
+            </div>
+            <div class="item">
+                <span>Directed by</span>
+                <span>Joe Dante</span>
+            </div>
+            <div class="item item-col">
+                <span>Main Characters</span>
+                <span>Bugs Bunny, Daffy Duck, <br>DJ, Kate, and Damian
+
+</span>
+            </div>
+            <div class="item item-col">
+                <span>One-liner</span>
+                <span>Cartoons and a stuntman team <br>up to stop ACME.</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const hoverElement = document.getElementById('monsterPower');
+        const audio = document.getElementById('sound');
+
+        hoverElement.addEventListener('mouseenter', () => {
+            audio.play();
+        });
+
+        hoverElement.addEventListener('mouseleave', () => {
+            audio.pause();
+            audio.currentTime = 0; // 将音频回到开始位置
+        });
+    </script>
+</body>
+
+</html>

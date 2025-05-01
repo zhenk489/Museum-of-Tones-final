@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Climate Crisis|Unbounded">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<style>
+      #monsterPower {
+        margin-top: 3em;
+        margin-bottom: 14em; /* 可根据需要调整数值，比如 24px、32px 等 */
+        width: 52vw;
+        
+   
+        height: auto
+        
+        
+    }
+</style>
+
+<body>
+    <header>
+        <h1 class="title2">The Croods</h1>
+        <a href="index.html">Home</a>
+    </header>
+    <main>
+        <div class="main-left">
+            <audio src="audio/疯狂原始人.mov" preload="auto" id="sound"></audio>
+            <img src="images/1.png" alt="Monster Power" id="monsterPower">
+            <h3>Fun Facts About Movie</h3>
+            <p>
+                Nicolas Cage, who voiced the overprotective dad Grug, often recorded his lines while wearing pajamas in his home studio, bringing a relaxed and quirky energy to the character. Interestingly, although Eep and Guy shared a strong on-screen bond, their voice actors—Emma Stone and Ryan Reynolds—never recorded together; all their chemistry was crafted in post-production editing.
+            </p>
+            <p>The Croods’ movement and expressions were influenced by physical comedy and early silent films, with animators studying slapstick techniques to bring primal humor to life. The film’s emotional depth was also a major focus; the father-daughter conflict between Grug and Eep added heart to the adventure, reflecting themes of change, independence, and family growth.</p>
+            <h3>From Sketch to Screen</h3>
+            <iframe class="mt-4" height="515" src="https://www.youtube.com/embed/h-N5gSZmH-Q?si=j3aRroiHKOIUwN0k" title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+            web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>In this interview featurette, the cast and creators of The Croods: A New Age share insights into the film’s story, character development, and visual design. Nicolas Cage, Emma Stone, and Ryan Reynolds discuss how their characters have evolved since the first movie, while the filmmakers highlight the challenge of creating an entirely new, colorful world filled with imaginative creatures and environments.</p>
+        </div>
+        <div class="main-right">
+            <p>Welcome to<br>THE CROODS’ CAVE</p>
+            <div class="item">
+                <span>Released</span>
+                <span>2013</span>
+            </div>
+            <div class="item">
+                <span>Studio</span>
+                <span>DreamWorks <br>Animation
+
+                </span>
+            </div>
+            <div class="item">
+                <span>Directed by</span>
+                <span>Kirk DeMicco<br>& Chris Sanders</span>
+            </div>
+            <div class="item item-col">
+                <span>Main Characters</span>
+                <span>Starring Grug, Eep, Guy,<br>Ugga, and Belt
+
+                </span>
+            </div>
+            <div class="item item-col">
+                <span>One-liner</span>
+                <span>A family escapes their<br> cave for a new world.</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const hoverElement = document.getElementById('monsterPower');
+        const audio = document.getElementById('sound');
+
+        hoverElement.addEventListener('mouseenter', () => {
+            audio.play();
+        });
+
+        hoverElement.addEventListener('mouseleave', () => {
+            audio.pause();
+            audio.currentTime = 0; // 将音频回到开始位置
+        });
+    </script>
+</body>
+
+</html>

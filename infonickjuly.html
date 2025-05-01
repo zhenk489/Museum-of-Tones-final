@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Climate Crisis|Unbounded">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<style>
+      #monsterPower {
+        margin-top: 3.5em;
+        margin-bottom: 7em; /* 可根据需要调整数值，比如 24px、32px 等 */
+        width: 45vw;
+    }
+</style>
+
+<body>
+    <header>
+        <h1 class="title2">Zootopia</h1>
+        <a href="index.html">Home</a>
+    </header>
+    <main>
+        <div class="main-left">
+            <audio src="audio/疯狂动物城.mov" preload="auto" id="sound"></audio>
+            <img src="images/疯狂动物城合集.png" alt="Monster Power" id="monsterPower">
+            <h3>Fun Facts About Movie</h3>
+            <p>
+                The filmmakers visited animal biologists and safari parks—especially in Kenya—to study movement, fur, and behavior in depth. Over 64 different species were researched to ensure accuracy, and each animal was scaled to real-life proportions, with giraffes standing at 24 feet tall and mice only 2 inches.
+            </p>
+            <p>Nick Wilde’s character design was inspired by the sleek, mid-century aesthetic of 1950s Disney animation. The creators drew from classic films to give him a cool, laid-back charm and a sly, charismatic edge that perfectly matched his fox persona.
+            </p>
+            <h3>From Sketch to Screen</h3>
+            <iframe class="mt-4" height="515" src="https://www.youtube.com/embed/Q0bGc0jpxtg?si=_2sEyRIBGMSxOJmL" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+             web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>In this behind-the-scenes interview, the directors of Zootopia—Byron Howard and Rich Moore—discuss the creative inspiration behind the film. They explain how real-world research trips, including visits to Africa, shaped the design of the city and its animal characters, and how the story evolved to highlight themes of diversity, ambition, and understanding across different species.
+
+            </p>
+        </div>
+        <div class="main-right">
+            <p>Welcome to<br>Critter City</p>
+            <div class="item">
+                <span>Released</span>
+                <span>2016</span>
+            </div>
+            <div class="item">
+                <span>Studio</span>
+                <span>Walt Disney <br>Animation Studios</span>
+            </div>
+            <div class="item">
+                <span>Directed by</span>
+                <span>Byron Howard</span>
+            </div>
+            <div class="item item-col">
+                <span>Main Characters</span>
+                <span>Starring Judy, Nick,<br> Chief Bogo and Bellwether</span>
+            </div>
+            <div class="item item-col">
+                <span>One-liner</span>
+                <span>A bunny cop and fox team up <br>to solve a city mystery.</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const hoverElement = document.getElementById('monsterPower');
+        const audio = document.getElementById('sound');
+
+        hoverElement.addEventListener('mouseenter', () => {
+            audio.play();
+        });
+
+        hoverElement.addEventListener('mouseleave', () => {
+            audio.pause();
+            audio.currentTime = 0; // 将音频回到开始位置
+        });
+    </script>
+</body>
+
+</html>
