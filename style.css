@@ -27,7 +27,7 @@ h1.title2 {
 .sticky-info-left h3 {
   font-family: "Unbounded";
   margin-top: 0.5em;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 600;
   margin-bottom: 1.2em;
   text-transform: uppercase;
@@ -35,23 +35,27 @@ h1.title2 {
 }
 .sticky-info-left p {
 
-  margin-top: 1.5em;
-  line-height: 1.6;
+  margin-top: 8em;
+  line-height: 1.4;
   font-family: "Unbounded", sans-serif;
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 22px;
+  font-weight: 400;
   color: rgba(40, 61, 198, 1);
-  max-width: 570px;
+ 
   margin-bottom: 1em;
+  text-transform: uppercase;
   
   
 }
 
 .sticky-info-right p {
   font-family: "Unbounded";
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 200;
   text-align: right;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  max-width: 550px;
 }
 .cartoon {
   height: calc(100vh - 176px);

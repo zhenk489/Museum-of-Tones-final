@@ -20,13 +20,14 @@
     <div class="cartoon">
         <div class="sticky-info">
             <div class="sticky-info-left">
-                <h3>Initializing character database...</h3>
-                <p>A digital identity manufacturer for cartoon characters, 
-                    this is the Cartoon Universe's Intelligence Bureau! Starlets who are active on the internet, 
-                    not just static pictures on a screen. By interacting with the avatars, 
-                    you can discover information about the animation world's characters, such as their backstories, secrets, and hidden eggs. 
-                    Feel free to approach the characters and introduce yourself.</p>
+                <h3 id="typewriter-title"></h3>
+            <p id="typewriter-body"></p>
+
             </div>
+            <div class="sticky-info-right">
+                <p id="fun-fact">Did you know Sully's fur had<br>2.3 million strands?</p>
+              </div>
+              
             
         </div>
     </div>
@@ -139,5 +140,60 @@
       </div>
       
 </body>
+<script>
+    const titleText = "Initializing character database...";
+    const bodyText = "Active files: 8 identities loaded\nHover to preview / Click to unlock file";
+  
+    const titleEl = document.getElementById("typewriter-title");
+    const bodyEl = document.getElementById("typewriter-body");
+  
+    let titleIndex = 0;
+    let bodyIndex = 0;
+  
+    function typeTitle() {
+      if (titleIndex < titleText.length) {
+        titleEl.innerHTML += titleText.charAt(titleIndex);
+        titleIndex++;
+        setTimeout(typeTitle, 65); // 中等速度
+      } else {
+        setTimeout(typeBody, 400); // 稍作停顿后开始打正文
+      }
+    }
+  
+    function typeBody() {
+      if (bodyIndex < bodyText.length) {
+        const char = bodyText.charAt(bodyIndex);
+        bodyEl.innerHTML += (char === "\n") ? "<br>" : char;
+        bodyIndex++;
+        setTimeout(typeBody, 45); // 正文打字速度适中
+      }
+    }
+  
+    window.addEventListener("DOMContentLoaded", typeTitle);
+
+    const facts = [
+    "Did you know Sully's fur had<br>2.3 million strands?",
+    "Remy’s ratatouille was created by a real chef!",
+    "Nick Wilde was designed in retro Disney style.",
+    "Scrat's acorn chase was inspired by slapstick comedy.",
+    "Elsa’s snowflake has 42 unique shapes!"
+  ];
+
+  let index = 0;
+  const factEl = document.getElementById("fun-fact");
+
+  function showNextFact() {
+    index = (index + 1) % facts.length;
+    factEl.classList.remove("fade-in");
+    void factEl.offsetWidth; // 强制重绘触发动画
+    factEl.innerHTML = facts[index];
+    factEl.classList.add("fade-in");
+  }
+
+  setInterval(showNextFact, 3000);
+  </script>
+  
+  
+  
 
 </html>
