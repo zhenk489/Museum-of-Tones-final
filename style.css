@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 header {
   padding: 1rem 2rem;
   display: flex;
@@ -9,11 +10,7 @@ header {
   justify-content: space-between;
   border-bottom: 3px solid rgba(40, 61, 198, 1);
 }
-.header-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+
 h1 {
   font-family: "Climate Crisis";
   color: rgba(40, 61, 198, 1);
@@ -21,66 +18,104 @@ h1 {
   font-size: 106px;
   margin-bottom: 10px;
 }
+
 h1.title2 {
   font-size: 64px;
 }
+
+/* === Sticky Info Left (Typewriter Text) === */
 .sticky-info-left h3 {
   font-family: "Unbounded";
-  margin-top: 0.5em;
+  margin-top: 0.8em;
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 1.2em;
   text-transform: uppercase;
-  
 }
-.sticky-info-left p {
 
-  margin-top: 8em;
-  line-height: 1.4;
+.sticky-info-left p {
+  margin-top: 20em;
+  line-height: 1.2;
   font-family: "Unbounded", sans-serif;
   font-size: 22px;
   font-weight: 400;
   color: rgba(40, 61, 198, 1);
- 
   margin-bottom: 1em;
   text-transform: uppercase;
-  
-  
 }
 
-.sticky-info-right p {
+#typewriter-title::after,
+#typewriter-body::after {
+  content: '';
+  animation: none;
+}
+
+/* === Sticky Info Right (Fact Scroll) === */
+.sticky-info-right {
   font-family: "Unbounded";
   font-size: 22px;
   font-weight: 200;
   text-align: right;
-  margin-bottom: 1em;
   text-transform: uppercase;
   max-width: 550px;
+  position: relative;
+  height: 3em;
+  overflow: hidden;
+  color: #2a33b8;
 }
+
+.fact-wrapper {
+  position: relative;
+  height: 3.5em;
+  overflow: hidden;
+  font-family: "Unbounded", sans-serif;
+  font-size: 18px;
+  color: #2a33b8;
+  text-align: right;
+}
+
+.fact-line {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fact-line.active {
+  opacity: 1;
+}
+
+
+
+
+
+
+/* === Cartoon Grid === */
 .cartoon {
   height: calc(100vh - 176px);
   background-color: rgba(229, 233, 255, 1);
   padding: 1rem 2rem;
   border-bottom: 1px solid rgba(40, 61, 198, 1);
 }
+
 .sticky-info {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   color: rgba(40, 61, 198, 1);
 }
+
 .cartoon-list {
   position: relative;
   margin-top: 2rem;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 2rem;
 }
+
 .cartoon-list::before {
   content: "";
   position: absolute;
@@ -91,12 +126,14 @@ h1.title2 {
   transform: translate(-50%, -50%);
   background: rgba(40, 61, 198, 1);
 }
+
 .cartoon-list .item {
   width: 21%;
   padding: 2%;
-  position: relative;
   text-align: center;
+  position: relative;
 }
+
 .cartoon-list .item::before {
   content: "";
   position: absolute;
@@ -107,141 +144,43 @@ h1.title2 {
   transform: translate(0, -50%);
   background: rgba(40, 61, 198, 1);
 }
+
 .cartoon-list .item:nth-of-type(4n)::before {
   background: none;
 }
+
 .cartoon-list .item .title {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
+
 .cartoon-list .item .title span {
   color: rgba(40, 61, 198, 1);
   font-family: "Unbounded";
 }
-.cartoon-list .item .title .title-left span:nth-of-type(2) {
+
+.cartoon-list .item .title-left span:nth-of-type(2) {
   margin-left: 10px;
 }
+
 .cartoon-list .item img {
   width: 80%;
   transition: all 0.3s;
 }
+
 .cartoon-list .item:hover img {
   animation: gelatine 0.8s ease;
 }
 
 @keyframes gelatine {
-  0%, 100% {
-    transform: scale(1, 1);
-  }
-  20% {
-    transform: scale(1.1, 0.9);
-  }
-  40% {
-    transform: scale(0.95, 1.05);
-  }
-  60% {
-    transform: scale(1.05, 0.95);
-  }
-  80% {
-    transform: scale(0.98, 1.02);
-  }
+  0%, 100% { transform: scale(1, 1); }
+  20% { transform: scale(1.1, 0.9); }
+  40% { transform: scale(0.95, 1.05); }
+  60% { transform: scale(1.05, 0.95); }
+  80% { transform: scale(0.98, 1.02); }
 }
 
-
-.gelatine {
-  animation: gelatine 0.5s infinite;
-}
-
-header a {
-  font-family: "Unbounded";
-  font-size: 40px;
-  font-weight: 900;
-  color: rgba(40, 61, 198, 1);
-  text-transform: uppercase;
-  text-decoration: none;
-  margin-top: 20px;
-}
-main {
-  position: relative;
-}
-.main-left {
-  width: calc(100% - 590px);
-  padding: 20px 120px 20px 70px;
-}
-.main-left img {
-  display: block;
-  width: 80%;
-  margin: 0 auto;
-}
-iframe {
-  width: 100%;
-}
-.mt-4 {
-  margin-top: 4rem;
-}
-.main-left h3 {
-  margin-top: 5rem;
-  font-family: "Unbounded";
-  font-size: 28px;
-  font-weight: 700;
-  color: rgba(40, 61, 198, 1);
-  margin-bottom: 1em;
-}
-.main-left p {
-  margin-top: 2.4rem;
-  font-size: 18px;
-  color: rgba(40, 61, 198, 1);
-  line-height: 32px;
-  font-family: "Unbounded", sans-serif;
-  font-weight: 100;
-  
-}
-.main-right {
-  width: 390px;
-  padding: 2rem 0;
-  background-color: rgba(229, 233, 255, 1);
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-}
-.main-right p {
-  font-family: "Unbounded";
-  font-size: 24px;
-  color: rgba(40, 61, 198, 1);
-  padding: 50px 10px 30px 30px;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(40, 61, 198, 1);
-  font-weight: 700;
-}
-.main-right .item {
-  border-bottom: 1px solid rgba(40, 61, 198, 1);
-  padding: 20px 10px 20px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.main-right .item.item-col {
-  display: block;
-}
-.main-right .item span {
-  font-size: 18px;
-  color: rgba(40, 61, 198, 1);
-  text-align: right;
-  font-family: "Unbounded", sans-serif;
-  font-weight: 200;
-}
-.main-right .item span:nth-of-type(1) {
-  font-weight: 300;
-}
-.main-right .item.item-col span {
-  display: block;
-  text-align: left;
-}
-.main-right .item.item-col span:nth-of-type(2) {
-  margin-top: 10px;
-}
+/* === Scrolling Footer === */
 .scroll-container {
   overflow: hidden;
   white-space: nowrap;

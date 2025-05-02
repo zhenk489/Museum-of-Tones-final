@@ -24,11 +24,13 @@
             <p id="typewriter-body"></p>
 
             </div>
-            <div class="sticky-info-right">
-                <p id="fun-fact">Did you know Sully's fur had<br>2.3 million strands?</p>
-              </div>
-              
-            
+            <div class="fact-wrapper">
+                <p class="fact-line active">Did you know Sully's fur had<br>2.3 million strands?</p>
+                <p class="fact-line">Remy’s ratatouille was designed<br>by a real chef!</p>
+                <p class="fact-line">Nick Wilde was inspired<br>by 1950s Disney style.</p>
+                <p class="fact-line">Scrat’s acorn obsession defined<br>the whole Ice Age!</p>
+                <p class="fact-line">Elsa’s snowflake animation<br>has 42 unique shapes.</p>
+            </div>  
         </div>
     </div>
     <div class="cartoon-list">
@@ -140,60 +142,50 @@
       </div>
       
 </body>
+
 <script>
     const titleText = "Initializing character database...";
     const bodyText = "Active files: 8 identities loaded\nHover to preview / Click to unlock file";
   
     const titleEl = document.getElementById("typewriter-title");
     const bodyEl = document.getElementById("typewriter-body");
+    const factLines = document.querySelectorAll(".fact-line");
   
     let titleIndex = 0;
     let bodyIndex = 0;
+    let currentFact = 0;
   
     function typeTitle() {
       if (titleIndex < titleText.length) {
-        titleEl.innerHTML += titleText.charAt(titleIndex);
-        titleIndex++;
-        setTimeout(typeTitle, 65); // 中等速度
+        titleEl.innerHTML += titleText.charAt(titleIndex++);
+        setTimeout(typeTitle, 65);
       } else {
-        setTimeout(typeBody, 400); // 稍作停顿后开始打正文
+        setTimeout(typeBody, 400);
       }
     }
   
     function typeBody() {
       if (bodyIndex < bodyText.length) {
-        const char = bodyText.charAt(bodyIndex);
-        bodyEl.innerHTML += (char === "\n") ? "<br>" : char;
-        bodyIndex++;
-        setTimeout(typeBody, 45); // 正文打字速度适中
+        const char = bodyText.charAt(bodyIndex++);
+        bodyEl.innerHTML += char === "\n" ? "<br>" : char;
+        setTimeout(typeBody, 45);
+      } else {
+        setTimeout(startFactLoop, 800);
       }
     }
   
-    window.addEventListener("DOMContentLoaded", typeTitle);
-
-    const facts = [
-    "Did you know Sully's fur had<br>2.3 million strands?",
-    "Remy’s ratatouille was created by a real chef!",
-    "Nick Wilde was designed in retro Disney style.",
-    "Scrat's acorn chase was inspired by slapstick comedy.",
-    "Elsa’s snowflake has 42 unique shapes!"
-  ];
-
-  let index = 0;
-  const factEl = document.getElementById("fun-fact");
-
-  function showNextFact() {
-    index = (index + 1) % facts.length;
-    factEl.classList.remove("fade-in");
-    void factEl.offsetWidth; // 强制重绘触发动画
-    factEl.innerHTML = facts[index];
-    factEl.classList.add("fade-in");
-  }
-
-  setInterval(showNextFact, 3000);
+    function startFactLoop() {
+      factLines.forEach((line, i) => {
+        line.classList.remove("active");
+      });
+      factLines[0].classList.add("active");
+  
+      setInterval(() => {
+        factLines[currentFact].classList.remove("active");
+        currentFact = (currentFact + 1) % factLines.length;
+        factLines[currentFact].classList.add("active");
+      }, 3500);
+    }
+  
+    typeTitle();
   </script>
-  
-  
-  
-
-</html>
