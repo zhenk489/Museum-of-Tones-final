@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid rgba(40, 61, 198, 1);
+}
+
+h1 {
+  font-family: "Climate Crisis";
+  color: rgba(40, 61, 198, 1);
+  font-weight: 400;
+  font-size: 106px;
+  margin-bottom: 10px;
+}
+
+h1.title2 {
+  font-size: 64px;
+}
+
+/* === Sticky Info Left (Typewriter Text) === */
+.sticky-info-left h3 {
+  font-family: "Unbounded";
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 1.2em;
+  text-transform: uppercase;
+}
+
+.sticky-info-left p {
+  margin-top: 20em;
+  line-height: 1.2;
+  font-family: "Unbounded", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: rgba(40, 61, 198, 1);
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+#typewriter-title::after,
+#typewriter-body::after {
+  content: '';
+  animation: none;
+}
+
+/* === Sticky Info Right (Fact Scroll) === */
+.sticky-info-right {
+  font-family: "Unbounded";
+  font-size: 22px;
+  font-weight: 200;
+  text-align: right;
+  text-transform: uppercase;
+  max-width: 550px;
+  position: relative;
+  height: 3em;
+  overflow: hidden;
+  color: #2a33b8;
+}
+
+.fact-wrapper {
+  width: 50%;
+  position: relative;
+  height: 3.5em;
+  font-family: "Unbounded", sans-serif;
+  font-size: 22px;
+  color: #2a33b8;
+  text-align: right;
+}
+
+.fact-line {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fact-line.active {
+/*  overflow: auto;*/
+  opacity: 1;
+ 
+}
+
+
+
+
+
+
+/* === Cartoon Grid === */
+.cartoon {
+  height: calc(100vh - 176px);
+  background-color: rgba(229, 233, 255, 1);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(40, 61, 198, 1);
+}
+
+.sticky-info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  color: rgba(40, 61, 198, 1);
+}
+
+.cartoon-list {
+  position: relative;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.cartoon-list::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(40, 61, 198, 1);
+}
+
+.cartoon-list .item {
+  width: 21%;
+  padding: 2%;
+  text-align: center;
+  position: relative;
+}
+
+.cartoon-list .item::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 66%;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  background: rgba(40, 61, 198, 1);
+}
+
+.cartoon-list .item:nth-of-type(4n)::before {
+  background: none;
+}
+
+.cartoon-list .item .title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartoon-list .item .title span {
+  color: rgba(40, 61, 198, 1);
+  font-family: "Unbounded";
+}
+
+.cartoon-list .item .title-left span:nth-of-type(2) {
+  margin-left: 10px;
+}
+
+.cartoon-list .item img {
+  width: 80%;
+  transition: all 0.3s;
+}
+
+.cartoon-list .item:hover img {
+  animation: gelatine 0.8s ease;
+}
+
+@keyframes gelatine {
+  0%, 100% { transform: scale(1, 1); }
+  20% { transform: scale(1.1, 0.9); }
+  40% { transform: scale(0.95, 1.05); }
+  60% { transform: scale(1.05, 0.95); }
+  80% { transform: scale(0.98, 1.02); }
+}
+
+/* === Scrolling Footer === */
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #e3e6fd;
+  border-top: 2px solid #6a7ae5;
+  border-bottom: 2px solid #6a7ae5;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+}
+
+.scroll-text {
+  display: inline-block;
+  animation: scroll-left 20s linear infinite;
+  font-size: 20px;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 600;
+  color: #2a33b8;
+  white-space: nowrap;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
