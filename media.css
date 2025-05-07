@@ -1,12 +1,12 @@
 
 @media (max-width: 1024px) {
-  
+
   h1 {
     font-size: 80px;
   }
   iframe {
     width: 100%;
-    
+
   }
   .cartoon {
     padding: 0 1rem;
@@ -63,7 +63,7 @@
   .cartoon-list .item:nth-of-type(2n)::before {
     background: none;
   }
- 
+
   .main-right {
     position: static;
     width: 100%;
@@ -132,9 +132,9 @@
     padding:1rem;
   }
   .main-left{
-    
+
     width: 82%;
     padding: 1% 9%;
   }
- 
+
 }
